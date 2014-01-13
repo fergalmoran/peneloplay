@@ -1,0 +1,92 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <title>peneloplay</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+        <!-- build:css(.tmp) styles/main.css -->
+        <link rel="stylesheet" href="styles/main.css">
+        <!-- endbuild -->
+        <!-- build:js scripts/vendor/modernizr.js -->
+        <script src="bower_components/modernizr/modernizr.js"></script>
+        <!-- endbuild -->
+    </head>
+    <body>
+        <!--[if lt IE 10]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <style type="text/css" scoped>
+            .pnp-instance{
+                height: 98px;
+            }
+            .pnp-wrapper{
+                background: teal;
+                position: absolute;
+                overflow: hidden;
+                height: 98px;
+            }
+            .pnp-waveform {
+                width: 100%;
+                height: 100%;
+            }
+            .pnp-seekhead {
+                background: none 0px 0px repeat scroll rgb(235, 12, 122);
+                height: 100%;
+                position: absolute;
+                top: 0px;
+                width: 1px;
+                z-index: 1001;
+            }
+            .pnp-time-display-label {
+                background-color: rgb(64, 129, 64);
+                width: 32px;
+                position: absolute;
+                color: rgb(255, 255, 255);
+                font-size: 72%;
+                text-align: center;
+            }
+            .pnp-time-display-label-elapsed {
+                top: 0px;
+            }
+            .pnp-time-display-label-duration {
+                top: 0px;
+                right: 0px;
+            }
+        </style>
+
+        <div class="container">
+            <div class="row">
+                <div class="pnp-instance">
+                    <h3>Here, have some muzaq</h3>
+                    <div class="pnp-wrapper">
+                        <img class="pnp-waveform" alt="mix waveform" src="images/b14c8a0e-bb8c-4ec2-a500-7135c928550a.png">
+                        <label class="pnp-time-display-label pnp-time-display-label-elapsed">00:00</label>
+                        <div class="pnp-time-display-label pnp-time-display-label-duration">1:20</div>
+                        <div class="pnp-download-overlay"></div>
+                        <div class="pnp-played-overlay"></div>
+                        <div class="pnp-seekhead"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="clear"></div>
+            <div class="row">
+                <button class="pnp-play-pause-button button">Play</button>
+            </div>
+        </div>
+
+        <!-- build:js scripts/vendor.js -->
+        <!-- bower:js -->
+        <script src="bower_components/jquery/jquery.js"></script>
+        <!-- endbower -->
+        <!-- endbuild -->
+
+        <!-- build:js scripts/main.js -->
+        <script data-main="scripts/main" src="bower_components/requirejs/require.js"></script>
+        <!-- endbuild -->
+</body>
+</html>
