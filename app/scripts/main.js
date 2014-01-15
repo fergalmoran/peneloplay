@@ -1,5 +1,6 @@
 require.config({
-    paths: {
+
+paths: {
         jquery: '../bower_components/jquery/jquery',
         bootstrapAffix: '../bower_components/sass-bootstrap/js/affix',
         bootstrapAlert: '../bower_components/sass-bootstrap/js/alert',
@@ -14,7 +15,7 @@ require.config({
         bootstrapTransition: '../bower_components/sass-bootstrap/js/transition',
         rxjs: '../bower_components/rxjs/rx',
         mediaelement: '../bower_components/mediaelement/build/mediaelement',
-        soundmanager2: '../bower_components/soundmanager2/script/soundmanager2'
+        soundmanager2: '../lib/sm/script/soundmanager2'
     },
     shim: {
         bootstrapAffix: {
@@ -49,6 +50,9 @@ require.config({
         },
         bootstrapTransition: {
             deps: ['jquery']
+        },
+        'soundmanager2': {
+            exports: 'soundManager'
         }
     }
 });
