@@ -33,7 +33,6 @@ define(["jquery", "rxjs", "soundmanager2"], function($, rxjs, soundManager){
     Peneloplay = {
 
         _mouseDown: function (event) {
-            console.log("Mouse down");
             if (_player) {
                 _player.setPosition(
                     (_player.duration / 100) * ((event.pageX - bounds.waveformLeft) / bounds.waveformWidth) * 100);
@@ -41,19 +40,14 @@ define(["jquery", "rxjs", "soundmanager2"], function($, rxjs, soundManager){
             $(event.currentTarget).mouseup($.proxy(this._mouseDown, this));
         },
         _mouseMove: function (event) {
-            console.log("Mouse moving");
             ui.seekHead.css('left', (event.pageX));//.fadeIn('fast');
         },
         _mouseLeave: function (event) {
-            console.log("Mouse leave");
             ui.seekHead.hide();
             ui.wrapper.unbind("mousedown");
             ui.wrapper.unbind("mousemove");
         },
         _mouseEnter: function (event) {
-            console.log("Mouse enter");
-
-            //setup move and down events
             ui.wrapper.mousedown($.proxy(this._mouseDown, this));
             ui.wrapper.mousemove($.proxy(this._mouseMove, this));
 
